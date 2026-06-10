@@ -1,0 +1,9 @@
+class Solution:
+    def returnToBoundaryCount(self, nums: List[int]) -> int:
+        times = 0
+        count = 0
+        for i in nums:
+                count += i
+            if count == 0:
+                times += 1 
+        return times
