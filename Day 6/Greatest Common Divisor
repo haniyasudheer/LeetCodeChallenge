@@ -1,0 +1,11 @@
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        # Since the GCD of all numbers in the  array is equal to the GCD of its minimum and maximum elements, we  only need to focus on these two values.
+        s = min(nums)
+        l = max(nums)
+        #euclidian formula
+        while(l!=0):
+            temp = l
+            l = s%l
+            s = temp
+        return s 
